@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 11:51:05 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/29 15:14:28 by ehande           ###   ########.fr       */
+/*   Updated: 2021/01/31 15:22:56 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,21 @@ void		drow_map(t_all *all)
 static void	f1(t_all *all, int i, int j)
 {
 	if (!(ft_strrchr("WSNE210", all->map[i - 1][j])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i + 1][j])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i][j + 1])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i][j - 1])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i - 1][j - 1])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i - 1][j + 1])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i + 1][j - 1])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 	if (!(ft_strrchr("WSNE210", all->map[i + 1][j + 1])))
-		close_app(all, "error - incorrect map format!");
+		close_app("error - incorrect map format!");
 }
 
 void		check_sides(t_all *all, t_vl *vl)
@@ -61,16 +61,16 @@ void		check_sides(t_all *all, t_vl *vl)
 	j = -1;
 	while (all->map[0][++i])
 		if (!(ft_strrchr("1 ", all->map[0][i])))
-			close_app(all, "error - incorrect map format!");
+			close_app("error - incorrect map format!");
 	while (all->map[++j] != NULL)
 		if (!(ft_strrchr("1 ", all->map[j][0])))
-			close_app(all, "error - incorrect map format!");
+			close_app("error - incorrect map format!");
 	while (all->map[++vl->n_j] != NULL)
 		if (!(ft_strrchr("1 ", all->map[vl->n_j][i - 1])))
-			close_app(all, "error - incorrect map format!");
+			close_app("error - incorrect map format!");
 	while (all->map[j - 1][--i])
 		if (!(ft_strrchr("1 ", all->map[j - 1][i])))
-			close_app(all, "error - incorrect map format!");
+			close_app("error - incorrect map format!");
 }
 
 void		check_map(t_all *all, t_vl *vl)
@@ -98,5 +98,5 @@ void		check_map(t_all *all, t_vl *vl)
 				f1(all, vl->i, vl->j);
 		}
 	if (vl->counter != 1)
-		close_app(all, "error - incorrect map format, this game only for one!");
+		close_app("error - incorrect map format, this game only for one!");
 }

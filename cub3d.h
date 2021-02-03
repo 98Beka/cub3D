@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 20:58:29 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/29 15:09:45 by ehande           ###   ########.fr       */
+/*   Updated: 2021/01/31 21:34:55 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define TXW		64
 # define TXH		64
 # define DEGREE		3.14159265359 / 180
+# define PI			3.14159265359
 # define F_NONE		0b00000000
 # define F_C		0b00000001
 # define F_NO		0b00000010
@@ -204,11 +205,11 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*rmdr(char *sbf, int i, int j);
 void			get_inform(char *arg, t_all *all);
 void			drow_map(t_all *all);
-int				close_app(t_all *all, char *s);
+int				close_app(char *s);
 int				ch_is_map(char *s);
 t_list			*check_line(char *s, t_all *all);
 void			all_init(t_all *all);
-void			skip_sp(char **s, int vl);
+int				skip_sp(char **s, int vl);
 int				get_digit(char **s);
 void			pars_inform(t_all *all, char *s);
 void			check_map(t_all *all, t_vl *vl);
@@ -224,5 +225,6 @@ void			get_textur(t_all *all);
 void			player_start_rotate(t_all *all);
 void			save_img(t_all *all);
 void			drow_sprit(t_all *all, float *zb);
+void			make_win(t_all *all);
 
 #endif

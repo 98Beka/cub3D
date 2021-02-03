@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 11:48:08 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/30 21:14:04 by ehande           ###   ########.fr       */
+/*   Updated: 2021/01/31 15:18:52 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,8 @@ void	init_vl(t_vl *vl)
 	vl->p = NULL;
 }
 
-int		close_app(t_all *all, char *s)
+int		close_app(char *s)
 {
-	int i;
-
-	i = -1;
-	free(all->inf.so);
-	free(all->inf.no);
-	free(all->inf.s);
-	free(all->inf.ea);
-	free(all->inf.we);
-	while (all->map[++i])
-		free(all->map[i]);
 	write(1, s, ft_strlen(s));
 	write(1, "\n", 1);
 	exit(0);

@@ -1,9 +1,11 @@
-C 139, 0, 0   
-NO ./Users/ehande/Desktop/cub3d/dop_files/WALL78.xpm
-EA ./Users/ehande/Desktop/cub3d/dop_files/WALL16.xpm
-S ./Users/ehande/Desktop/cub3d/dop_files/pofficer_w1_1.xpm
-SO ./Users/ehande/Desktop/cub3d/dop_files/WALL66.xpm
-WE ./Users/ehande/Desktop/cub3d/dop_files/WALL71.xpm
+C  139, 0, 0   
+
+
+NO ./dop_files/WALL78.xpm
+EA ./dop_files/WALL16.xpm
+S ./dop_files/pofficer_w1_1.xpm
+SO ./dop_files/WALL66.xpm
+WE ./dop_files/WALL71.xpm
 F 0, 0, 0
 R 800 600
 111111111111111111111111111111111

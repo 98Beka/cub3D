@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 08:47:23 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/28 21:08:13 by ehande           ###   ########.fr       */
+/*   Updated: 2021/01/31 21:32:59 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,16 @@ void			px_put_sc(t_all *all, int x, int y, int color)
 		}
 		vl.i++;
 	}
+}
+
+void			make_win(t_all *all)
+{
+	int x;
+
+	x = all->inf.r.x;
+	all->scr.mlx = mlx_init();
+	all->scr.win = mlx_new_window(all->scr.mlx, x, all->inf.r.y, "cub3D!");
+	all->img.img = mlx_new_image(all->scr.mlx, x, all->inf.r.y);
+	all->img.addr = mlx_get_data_addr(all->img.img, &all->img.bits_per_pixel,
+			&all->img.line_length, &all->img.endian);
 }

@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 11:51:58 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/30 21:15:31 by ehande           ###   ########.fr       */
+/*   Updated: 2021/01/31 15:19:46 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void		get_inform(char *argv, t_all *all)
 
 	head = NULL;
 	if (!(vl.j = open(argv, O_RDONLY)))
-		close_app(all, "file not finded!");
+		close_app("file not finded!");
 	while (get_next_line(vl.j, &vl.p) && !ch_is_map(vl.p))
 		if (*vl.p && *vl.p != ' ')
 			ft_lstadd_back(&head, ft_lstnew(vl.p));
@@ -107,5 +107,5 @@ void		get_inform(char *argv, t_all *all)
 	}
 	free(all->inf_arr);
 	if (all->flags != (char)0b11111111 || vl.i != 8)
-		close_app(all, "error - incorect inform format!");
+		close_app("error - incorect inform format!");
 }

@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 11:47:53 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/30 21:13:47 by ehande           ###   ########.fr       */
+/*   Updated: 2021/01/31 21:31:08 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*check_line(char *s, t_all *all)
 		return (ft_lstnew(s));
 	if ('R' != *s && 'N' != *s && 'S' != *s && 'W' != *s
 			&& 'E' != *s && 'S' != *s && 'F' != *s && 'C' != *s)
-		close_app(all, "not_wallid line!");
+		close_app("not_wallid line!");
 	return (ft_lstnew(s));
 }
 
@@ -63,15 +63,22 @@ void	all_init(t_all *all)
 	all->sp_num = 0;
 }
 
-void	skip_sp(char **s, int vl)
+int		skip_sp(char **s, int vl)
 {
+	char flag;
+
+	flag = 0;
 	while (**s == ' ')
 		*s += 1;
 	if (vl)
 	{
 		if (**s == ',')
+		{
+			flag = 1;
 			*s += 1;
+		}
 		while (**s == ' ')
 			*s += 1;
 	}
+	return (flag);
 }
