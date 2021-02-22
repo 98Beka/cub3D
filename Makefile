@@ -6,15 +6,15 @@
 #    By: ehande <ehande@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/26 08:47:35 by ehande            #+#    #+#              #
-#    Updated: 2021/01/30 22:33:16 by ehande           ###   ########.fr        #
+#    Updated: 2021/02/22 17:43:18 by ehande           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub3D
 LIBFT = dop_files/libft/libft.a
 LB = dop_files/libft
-SRC =	cub3d.c dop_files/get_next_line.c dop_files/get_next_line_utils.c parser.c \
-		map.c dop1.c dop2.c  dop3.c pars_inf.c reycast.c drow.c get_textur.c save.c\
+SRC =	cub3d.c dop_files/get_next_line.c parser.c map.c dop1.c \
+		dop2.c  dop3.c pars_inf.c reycast.c drow.c get_textur.c save.c\
 
 CC = clang
 

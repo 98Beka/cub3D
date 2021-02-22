@@ -6,7 +6,7 @@
 /*   By: ehande <ehande@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 20:58:29 by ehande            #+#    #+#             */
-/*   Updated: 2021/01/31 21:34:55 by ehande           ###   ########.fr       */
+/*   Updated: 2021/02/22 17:42:40 by ehande           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,10 +199,6 @@ typedef struct	s_all
 }				t_all;
 
 int				get_next_line(int fd, char **line);
-void			*ft_memmove(void *dst, const void *src, size_t len);
-int				ft_strchrgnl(const char *s, int c);
-char			*ft_strjoin(char const *s1, char const *s2);
-char			*rmdr(char *sbf, int i, int j);
 void			get_inform(char *arg, t_all *all);
 void			drow_map(t_all *all);
 int				close_app(char *s);
